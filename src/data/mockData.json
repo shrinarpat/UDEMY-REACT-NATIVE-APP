@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Narpat Singh",
+      "email": "abc@test.com"
+    },
+    {
+      "id": 2,
+      "name": "Rajat Singh",
+      "email": "abc@test.com"
+    },
+    {
+      "id": 3,
+      "name": "Raj Singh",
+      "email": "abc@test.com"
+    },
+    {
+      "id": 4,
+      "name": "Ram Singh",
+      "email": "abc@test.com"
+    },
+    {
+      "id": 5,
+      "name": "Durga Singh",
+      "email": "abc@test.com"
+    },
+    {
+      "id": 6,
+      "name": "Sonu Singh",
+      "email": "abc@test.com"
+    },
+    {
+      "id": 7,
+      "name": "Kailash Singh",
+      "email": "abc@test.com"
+    },
+    {
+      "id": 8,
+      "name": "Sunil Singh",
+      "email": "abc@test.com"
+    },
+    {
+      "id": 9,
+      "name": "Dinesh Singh",
+      "email": "abc@test.com"
+    },
+    {
+      "id": 10,
+      "name": "Vikram Singh",
+      "email": "abc@test.com"
+    },
+    {
+      "id": 11,
+      "name": "Rajesh Singh",
+      "email": "abc@test.com"
+    },
+    {
+      "id": 12,
+      "name": "Prem Singh",
+      "email": "abc@test.com"
+    }
+  ]
+}
