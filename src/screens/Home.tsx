@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
 
 const Home = ({navigation, route}) => {
-  const {appName} = route.params;
+  const {user} = route.params;
 
   const changeParamsHandler = () => {
     navigation.setParams({
@@ -13,9 +13,15 @@ const Home = ({navigation, route}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Home Screen</Text>
-      <Text style={styles.text}>{appName}</Text>
       <View style={styles.buttonWrapper}>
         <Button title="Change Params" onPress={changeParamsHandler} />
+      </View>
+      <View style={styles.buttonWrapper}>
+        <Button
+          title="Go to Posts"
+          color="green"
+          onPress={() => navigation.navigate('Posts')}
+        />
       </View>
       <View style={styles.buttonWrapper}>
         <Button

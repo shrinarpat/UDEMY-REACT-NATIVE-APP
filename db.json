@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "username": "Narpat Singh",
+      "email": "narpat@test.com",
+      "password": "123456",
+      "isValid": true,
+      "id": 1
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "userid": 1,
+      "title": "React",
+      "summary": "The library for web and native user interfaces",
+      "description": "React lets you build user interfaces out of individual pieces called components. Create your own React components like Thumbnail, LikeButton, and Video. Then combine them into entire screens, pages, and apps."
+    },
+    {
+      "id": 2,
+      "userid": 1,
+      "title": "Angular",
+      "summary": "The web development framework for building the future",
+      "description": "Angular supports you with an opinionated platform as your team and apps grow. This allows you to build testable, and scalable user interfaces that perform well as they grow."
+    },
+    {
+      "id": 3,
+      "userid": 1,
+      "title": "Vue",
+      "summary": "An approachable, performant and versatile framework for building web user interfaces.",
+      "description": "Approachable Builds on top of standard HTML, CSS and JavaScript with intuitive API and world-class documentation.Performant Truly reactive, compiler-optimized rendering system that rarely requires manual optimization.Versatile A rich, incrementally adoptable ecosystem that scales between a library and a full-featured framework."
+    },
+    {
+      "id": 4,
+      "userid": 1,
+      "title": "Next JS",
+      "summary": "The React Framework for the Web",
+      "description": "Used by some of the world's largest companies, Next.js enables you to create full-stack Web applications by extending the latest React features, and integrating powerful Rust-based JavaScript tooling for the fastest builds."
+    }
+  ]
+}

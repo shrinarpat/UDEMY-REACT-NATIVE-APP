@@ -1,21 +1,47 @@
-import React from 'react';
-import {ScrollView, View, Text, StyleSheet, Button} from 'react-native';
+import React, {useState} from 'react';
+import {
+  ScrollView,
+  View,
+  Text,
+  StyleSheet,
+  Button,
+  TextInput,
+} from 'react-native';
 
 import usePostsAPI from '../utils/usePostsAPI';
 
 const Posts = () => {
-  const [posts, setPosts] = usePostsAPI();
+  const [searchText, setSearchText] = useState('');
+  const {posts, setPosts, allPosts, searchPost} = usePostsAPI();
+
+  const onSearchHanler = async val => {
+    setSearchText(val);
+    let res = await searchPost(searchText);
+
+    if (res.status === 200) {
+      res = await res.json();
+      setPosts(res);
+    }
+  };
   return (
     <ScrollView>
       <View style={styles.container}>
+        <View>
+          <TextInput
+            placeholder="Search"
+            value={searchText}
+            style={styles.textInput}
+            onChangeText={val => onSearchHanler(val)}
+          />
+        </View>
         {posts &&
           posts.map(post => {
             return (
               <View key={post.id} style={styles.postCard}>
-                <Text style={styles.titleText}>Title: {post.title}</Text>
-                <Text style={styles.bodyText}> {post.body}</Text>
+                <Text style={styles.titleText}>{post.title}</Text>
+                <Text style={styles.bodyText}> {post.summary}</Text>
                 <View style={styles.buttonWrapper}>
-                  <Button title="Read More" color={'gray'} />
+                  <Button title="Read More" color={'#f4511e'} />
                 </View>
               </View>
             );
@@ -50,6 +76,16 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
+  },
+  textInput: {
+    height: 40,
+    padding: 10,
+    marginBottom: 20,
+    borderColor: '#f4511e',
+    borderWidth: 2,
+    borderRadius: 10,
+    shadowColor: 'white',
+    elevation: 10,
   },
 });
 

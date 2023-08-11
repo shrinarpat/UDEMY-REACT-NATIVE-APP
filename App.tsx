@@ -3,21 +3,13 @@ import {View, Button} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-// import ListView from './src/ListView';
-// import SectionListView from './src/SectionListView';
-// import StylingRN from './src/StylingRN';
-// import RNForm from './src/RNForm';
-// import GridDesign from './src/GridDesign';
-// import ResponsiveLayout from './src/ResponsiveLayout';
-// import CustomButton from './src/CustomButton';
-// import RadioButton from './src/RadioButton';
-
 import Home from './src/screens/Home';
 import Login from './src/screens/Login';
 import Header from './src/components/Header';
 import Signup from './src/screens/Signup';
 import Details from './src/screens/Details';
 import AuthContext from './src/utils/useAuth';
+import Posts from './src/screens/Posts';
 
 const Stack = createNativeStackNavigator();
 
@@ -48,7 +40,10 @@ const App = () => {
                   headerRight: () => <Header />,
                   title: 'Welcome',
                 }}
-                initialParams={{appName: 'My Super App'}}
+                initialParams={{
+                  appName: 'My Super App',
+                  user: {username: 'Default'},
+                }}
               />
               <Stack.Screen
                 name="details"
@@ -57,6 +52,7 @@ const App = () => {
                   headerShown: false,
                 }}
               />
+              <Stack.Screen name="Posts" component={Posts} />
             </Stack.Group>
           ) : (
             <Stack.Group screenOptions={{headerShown: false}}>
