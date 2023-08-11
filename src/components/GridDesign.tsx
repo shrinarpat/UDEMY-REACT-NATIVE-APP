@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import ListData from './data/mockData.json';
+import ListData from '../data/mockData.json';
 
 const GridDesign = () => {
   return (

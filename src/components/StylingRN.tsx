@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, ScrollView, StyleSheet} from 'react-native';
-import exStyles from './styles/styles';
+import exStyles from '../styles/styles';
 
 const StylingRN = () => {
   return (
