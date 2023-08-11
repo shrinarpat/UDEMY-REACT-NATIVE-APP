@@ -10,17 +10,18 @@ import Signup from './src/screens/Signup';
 import Details from './src/screens/Details';
 import AuthContext from './src/utils/useAuth';
 import Posts from './src/screens/Posts';
+import Post from './src/screens/Post';
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   return (
     <AuthContext.Provider value={{isLoggedIn, setIsLoggedIn}}>
       <NavigationContainer>
         <Stack.Navigator
           id="RootNavigator"
-          initialRouteName="login"
+          initialRouteName="Posts"
           screenOptions={{
             headerStyle: {
               backgroundColor: '#f4511e',
@@ -53,6 +54,7 @@ const App = () => {
                 }}
               />
               <Stack.Screen name="Posts" component={Posts} />
+              <Stack.Screen name="Post" component={Post} />
             </Stack.Group>
           ) : (
             <Stack.Group screenOptions={{headerShown: false}}>

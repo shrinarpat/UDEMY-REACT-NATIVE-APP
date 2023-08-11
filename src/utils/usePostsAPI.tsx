@@ -1,9 +1,10 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useRef} from 'react';
 import {POST_API, JSON_SERVER_URL} from './constants';
 
 const usePostsAPI = () => {
   const [allPosts, setAllPosts] = useState([]);
   const [posts, setPosts] = useState([]);
+  const timerRef = useRef();
   useEffect(() => {
     fetchPosts();
   }, []);
@@ -16,7 +17,18 @@ const usePostsAPI = () => {
   };
 
   const searchPost = searchText => {
-    return fetch(`${JSON_SERVER_URL}/posts?q=${searchText}`);
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
+    timerRef.current = setTimeout(async () => {
+      let res = await fetch(`${JSON_SERVER_URL}/posts?q=${searchText}`);
+
+      if (res.status === 200) {
+        res = await res.json();
+        setPosts(res);
+      }
+    }, 300);
+    // return posts;
   };
 
   return {posts, setPosts, allPosts, searchPost};

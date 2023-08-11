@@ -7,6 +7,7 @@ import {
   Button,
   TextInput,
 } from 'react-native';
+import {Link} from '@react-navigation/native';
 
 import usePostsAPI from '../utils/usePostsAPI';
 
@@ -14,14 +15,9 @@ const Posts = () => {
   const [searchText, setSearchText] = useState('');
   const {posts, setPosts, allPosts, searchPost} = usePostsAPI();
 
-  const onSearchHanler = async val => {
+  const onSearchHanler = val => {
     setSearchText(val);
-    let res = await searchPost(searchText);
-
-    if (res.status === 200) {
-      res = await res.json();
-      setPosts(res);
-    }
+    searchPost(searchText);
   };
   return (
     <ScrollView>
@@ -41,7 +37,11 @@ const Posts = () => {
                 <Text style={styles.titleText}>{post.title}</Text>
                 <Text style={styles.bodyText}> {post.summary}</Text>
                 <View style={styles.buttonWrapper}>
-                  <Button title="Read More" color={'#f4511e'} />
+                  <Link
+                    to={{screen: 'Post', params: {post}}}
+                    style={styles.link}>
+                    Read More
+                  </Link>
                 </View>
               </View>
             );
@@ -86,6 +86,12 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     shadowColor: 'white',
     elevation: 10,
+  },
+  link: {
+    color: '#fff',
+    backgroundColor: '#f4511e',
+    padding: 8,
+    borderRadius: 5,
   },
 });
 
