@@ -36,7 +36,7 @@ const Signup = ({navigation}) => {
     let res = await signUpUser(formState);
     if (res.status === 201) {
       // console.warn('User signed up successfully');
-      navigation.navigate('login');
+      navigation.navigate('Login');
     } else {
       console.warn('Something went wrong, please try again later');
     }

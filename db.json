@@ -6,6 +6,41 @@
       "password": "123456",
       "isValid": true,
       "id": 1
+    },
+    {
+      "username": "Kailash",
+      "email": "kailash@emial.com",
+      "password": "123456",
+      "isValid": true,
+      "id": 2
+    },
+    {
+      "username": "Kailash2",
+      "email": "kailash@emial.com",
+      "password": "123456",
+      "isValid": true,
+      "id": 3
+    },
+    {
+      "username": "Jashoda",
+      "email": "jash@test.com",
+      "password": "123456",
+      "isValid": true,
+      "id": 4
+    },
+    {
+      "username": "Rajat",
+      "email": "rajat@test.com",
+      "password": "123456",
+      "isValid": true,
+      "id": 5
+    },
+    {
+      "username": "Sunil",
+      "email": "sunil@test.com",
+      "password": "123456",
+      "isValid": true,
+      "id": 6
     }
   ],
   "posts": [

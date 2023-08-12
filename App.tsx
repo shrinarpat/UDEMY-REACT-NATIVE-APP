@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import {View, Button} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {Provider} from 'react-redux';
 
+import appStore from './src/redux/store';
 import Home from './src/screens/Home';
 import Login from './src/screens/Login';
 import Header from './src/components/Header';
@@ -12,6 +13,8 @@ import Details from './src/screens/Details';
 import AuthContext from './src/utils/useAuth';
 import Posts from './src/screens/Posts';
 import Post from './src/screens/Post';
+import Cart from './src/screens/Cart';
+import Course from './src/components/Course';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,59 +34,59 @@ const App = () => {
   };
 
   return (
-    <AuthContext.Provider value={{isLoggedIn, setIsLoggedIn}}>
-      <NavigationContainer>
-        <Stack.Navigator
-          id="RootNavigator"
-          initialRouteName="Login"
-          screenOptions={{
-            headerStyle: {
-              backgroundColor: '#f4511e',
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-            },
-          }}>
-          {isLoggedIn ? (
-            <Stack.Group>
-              {/*  screens for logged in users */}
-              <Stack.Screen
-                name="home"
-                component={Home}
-                options={{
-                  headerRight: () => <Header />,
-                  title: 'Welcome',
-                }}
-                initialParams={{
-                  appName: 'My Super App',
-                  user: {username: 'Default'},
-                }}
-              />
-              <Stack.Screen
-                name="details"
-                component={Details}
-                options={{
-                  headerShown: false,
-                }}
-              />
-              <Stack.Screen name="Posts" component={Posts} />
-              <Stack.Screen name="Post" component={Post} />
-            </Stack.Group>
-          ) : (
-            <Stack.Group screenOptions={{headerShown: false}}>
-              {/* auth screens*/}
-              <Stack.Screen name="Login" component={Login} />
-              <Stack.Screen
-                name="signup"
-                component={Signup}
-                options={{title: 'Sign Up'}}
-              />
-            </Stack.Group>
-          )}
-        </Stack.Navigator>
-      </NavigationContainer>
-    </AuthContext.Provider>
+    <Provider store={appStore}>
+      <AuthContext.Provider value={{isLoggedIn, setIsLoggedIn}}>
+        <NavigationContainer>
+          <Stack.Navigator
+            id="RootNavigator"
+            initialRouteName="Login"
+            screenOptions={{
+              headerStyle: {
+                backgroundColor: '#f4511e',
+              },
+              headerTintColor: '#fff',
+              headerTitleStyle: {
+                fontWeight: 'bold',
+              },
+            }}>
+            {isLoggedIn ? (
+              <Stack.Group>
+                {/*  screens for logged in users */}
+                <Stack.Screen
+                  name="Home"
+                  component={Home}
+                  options={{
+                    headerRight: () => <Header />,
+                    title: 'Welcome',
+                  }}
+                />
+                {/* <Stack.Screen name="Course" component={Course} /> */}
+                <Stack.Screen
+                  name="details"
+                  component={Details}
+                  options={{
+                    headerShown: false,
+                  }}
+                />
+                <Stack.Screen name="Posts" component={Posts} />
+                <Stack.Screen name="Post" component={Post} />
+                <Stack.Screen name="Cart" component={Cart} />
+              </Stack.Group>
+            ) : (
+              <Stack.Group screenOptions={{headerShown: false}}>
+                {/* auth screens*/}
+                <Stack.Screen name="Login" component={Login} />
+                <Stack.Screen
+                  name="signup"
+                  component={Signup}
+                  options={{title: 'Sign Up'}}
+                />
+              </Stack.Group>
+            )}
+          </Stack.Navigator>
+        </NavigationContainer>
+      </AuthContext.Provider>
+    </Provider>
   );
 };
 
