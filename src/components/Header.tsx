@@ -1,15 +1,16 @@
 import React, {useContext} from 'react';
 import {View, Button} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import AuthContext from '../utils/useAuth';
 
 const Header = () => {
   const navigation = useNavigation();
-  const route = useRoute();
   const {setIsLoggedIn} = useContext(AuthContext);
-  const logoutHandler = () => {
+  const logoutHandler = async () => {
+    await AsyncStorage.clear();
     setIsLoggedIn(false);
-    navigation.navigate('login');
+    navigation.navigate('Login');
   };
   return (
     <View>

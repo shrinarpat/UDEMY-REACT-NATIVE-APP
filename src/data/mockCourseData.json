@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Angular - The Complete Guide",
+      "price": 699,
+      "description": "Learn Angular with Industry level project and highly experienced developers",
+      "image": "https://tse1.mm.bing.net/th?id=OIP.vOxCfQJcER_QdzZWTwyaKgHaFj&pid=Api&P=0&h=180"
+    },
+    {
+      "id": 2,
+      "name": "React - The Hooks Class",
+      "price": 999,
+      "description": "Learn React with Industry level projects and highly experienced developers",
+      "image": "https://nickroberts.ninja/wp-content/uploads/2017/07/react.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Vue JS - The Ultimate Course",
+      "price": 2300,
+      "description": "Learn Vue with Industry level project and highly experienced developers",
+      "image": "https://www.easeout.co/images/uploads/vue-logo.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "NodeJS, Express JS and Mongo DB",
+      "price": 4000,
+      "description": "Learn JS Backend with Industry level project and highly experienced developers",
+      "image": "https://www.surrealcms.com/uploads/nodejs-logo.png"
+    }
+  ]
+}

@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Button} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import Home from './src/screens/Home';
 import Login from './src/screens/Login';
@@ -15,13 +16,26 @@ import Post from './src/screens/Post';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    loadAsyncData();
+  }, []);
+
+  const loadAsyncData = async () => {
+    let loginUser = JSON.parse(await AsyncStorage.getItem('loggedInUser'));
+    // console.log(loginUser);
+    if (loginUser.isLoggedIn) {
+      setIsLoggedIn(true);
+    }
+  };
+
   return (
     <AuthContext.Provider value={{isLoggedIn, setIsLoggedIn}}>
       <NavigationContainer>
         <Stack.Navigator
           id="RootNavigator"
-          initialRouteName="Posts"
+          initialRouteName="Login"
           screenOptions={{
             headerStyle: {
               backgroundColor: '#f4511e',
@@ -59,7 +73,7 @@ const App = () => {
           ) : (
             <Stack.Group screenOptions={{headerShown: false}}>
               {/* auth screens*/}
-              <Stack.Screen name="login" component={Login} />
+              <Stack.Screen name="Login" component={Login} />
               <Stack.Screen
                 name="signup"
                 component={Signup}

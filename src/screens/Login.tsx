@@ -1,5 +1,6 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import {View, Text, Button, StyleSheet, TextInput} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import AuthContext from '../utils/useAuth';
 import useUserAuth from '../utils/useUserAuth';
 
@@ -11,14 +12,30 @@ const Login = ({navigation}) => {
   const {loginUser} = useUserAuth();
   const {setIsLoggedIn} = useContext(AuthContext);
 
+  useEffect(() => {
+    loadAsyncData();
+  }, []);
+
+  const loadAsyncData = async () => {
+    let loginUser = JSON.parse(await AsyncStorage.getItem('loggedInUser'));
+    // console.log(loginUser);
+    if (loginUser && loginUser?.isLoggedIn) {
+      navigation.navigate('Home');
+    }
+  };
+
   const loginHandler = async () => {
     let res = await loginUser(email, password);
     if (res.status === 200) {
       res = await res.json();
       if (res && res.length > 0) {
-        // console.warn('Successfully logged in');
         setIsLoggedIn(true);
-        navigation.navigate('home', {user: res[0]});
+        const user = {
+          isLoggedIn: true,
+          user: res[0],
+        };
+        await AsyncStorage.setItem('loggedInUser', JSON.stringify(user));
+        navigation.navigate('Home');
       } else {
         console.warn('Invalid username or password');
       }
