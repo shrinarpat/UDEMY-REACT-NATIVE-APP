@@ -1,4 +1,5 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# UDEMY REACT NATIVE APP
+UDEMY app is a React native app that flows like the Udemy app in which users can buy the course or read blogs on the latest and trending technologies.
 
 # Getting Started
 
@@ -46,34 +47,15 @@ If everything is set up _correctly_, you should see your new app running in your
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-## Step 3: Modifying your App
+## Step 3: Screens in the app
 
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+![login](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/fb50f568-b303-4390-97b5-ad834fcd28bf)
+![login-with-cred](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/0fb083e7-7b11-48a7-8cad-bf0fc8e09ade)
+![course list](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/67c28c31-0306-489e-af15-850f9053ebde)
+![bottom-tab-nav](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/51566cdb-fe54-4a13-9d86-d737968c266a)
+![cart page](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/5e7b9a72-c774-45aa-b7d6-7da5339bf86c)
+![post-page](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/32ad2b4e-7173-4844-a19e-4c454497cf5e)
+![filter-post](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/74705fdc-1d3f-4026-8be5-c68e73cdd5f1)
+![blog-post](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/462b54e7-0570-4669-ab4e-45432d0bd4db)
+![user-list](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/03b77441-6ca5-4e94-b91f-1f606d23421a)
+![signup](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/2a21c781-53f0-472b-bd5e-bf2a9f546713)
