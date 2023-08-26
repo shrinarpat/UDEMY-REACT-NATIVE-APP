@@ -49,5 +49,6 @@ This is one way to run your app — you can also run it directly from within And
 
 ## Step 3: Screens in the app
 
-![blog-post](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/ceab9658-ab5c-4396-945a-3ea200d01326)
+![blog-post](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/15d06f7c-1ebb-4e32-a65b-ed86eaf440a6)
+
 
