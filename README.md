@@ -47,8 +47,17 @@ If everything is set up _correctly_, you should see your new app running in your
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-## Step 3: Screens in the app
+## Step 3: APP SCREENS
 
-![blog-post](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/15d06f7c-1ebb-4e32-a65b-ed86eaf440a6)
+![login-with-cred](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/ad4a8e9d-8a38-4e0d-b65f-c9fdbb279107)
+![course list](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/16a68288-b7f4-437c-a1a8-46057775651a)
+![bottom-tab-nav](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/888b5462-e276-4c65-b3ee-4c0abc03a2d9)
+![cart page](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/c09977df-4832-4e8e-b88a-9eb63461bb5b)
+![post-page](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/8760d5fd-a8e0-4fe7-a4dd-1e3cb3ba86b1)
+![filter-post](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/548feedd-3d13-4aea-856a-14985b27ef47)
+![blog_post](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/29f5f41c-0a44-4454-a80e-28cca1a70462)
+![user-list](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/f4471131-fd68-437d-918e-57dfed9d5f4c)
+![signup](https://github.com/shrinarpat/UDEMY-REACT-NATIVE-APP/assets/44049208/889510a5-d099-47d2-b8ba-9ab3ac088f72)
+
 
 
